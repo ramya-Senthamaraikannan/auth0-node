@@ -1,0 +1,11 @@
+{
+  "name": "@pentaquest/pq-identity",
+  "version": "1.0.0",
+  "description": "Authentication system",
+  "main": "index.js",
+  "keywords": [
+    "auth0"
+  ],
+  "author": "Ramya Senthamaraikannan",
+  "license": "ISC"
+}

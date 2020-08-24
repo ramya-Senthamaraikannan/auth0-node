@@ -1,5 +1,5 @@
 {
-  "name": "@pentaquest/pq-identity",
+  "name": "auth0-node",
   "version": "1.0.0",
   "description": "Authentication system",
   "main": "index.js",
@@ -7,5 +7,9 @@
     "auth0"
   ],
   "author": "Ramya Senthamaraikannan",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express-jwt": "^6.0.0",
+    "jwks-rsa": "^1.9.0"
+  }
 }

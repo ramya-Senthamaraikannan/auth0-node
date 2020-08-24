@@ -1,4 +1,3 @@
-# Introduction 
 API authentication using auth0 JSON WEB TOKENS
 
 # Installation

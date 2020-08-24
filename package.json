@@ -1,6 +1,6 @@
 {
   "name": "auth0-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Authentication system",
   "main": "index.js",
   "keywords": [

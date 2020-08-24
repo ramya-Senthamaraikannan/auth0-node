@@ -3,7 +3,9 @@ API authentication using auth0 JSON WEB TOKENS
 
 # Installation
 
+```bash
 npm install auth0-node
+```
 
 # Usage
 

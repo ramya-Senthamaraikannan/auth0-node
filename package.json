@@ -6,6 +6,10 @@
   "keywords": [
     "auth0"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramya-Senthamaraikannan/auth0-node"
+  },
   "author": "Ramya Senthamaraikannan",
   "license": "ISC",
   "dependencies": {

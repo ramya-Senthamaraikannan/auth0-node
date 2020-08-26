@@ -15,22 +15,26 @@ const jwt = require('express-jwt')
 const jwks = require('jwks-rsa');
 ```
 
-**audience** parameter takes API path to which the token to be validated
-ex: https://xyz.com/authcheck
+**process.env.AUDIENCE** optional parameter takes clientId, for which the api to be validated
 
-**domain** parameter takes the domain name from the auth0 client application
+ex: vskjvjdb(clientId of a specific application)
+
+**process.env.DOMAIN** parameter takes the domain name from the auth0 
+
 ex: https://xyz.com/
 
 ```javascript
-authentication.jwtCheck = (audience, domain) => jwt({
+authentication.jwtCheck = (audience = null) => jwt({
     secret: jwks.expressJwtSecret({
         cache: true,
         rateLimit: true,
-        jwksRequestsPerMinute: 5,
-        jwksUri: `${domain}.well-known/jwks.json`
+        jwksRequestsPerMinute: 15,
+        jwksUri: `https://${process.env.DOMAIN}/.well-known/jwks.json`
     }),
-    audience: audience,
-    issuer: domain,
+    //AUDIENCE is the clientId of an application, provide this if you need an API to be validated specifically for a single client
+    audience: audience ? process.env.AUDIENCE : null,
+    issuer: `https://${process.env.DOMAIN}/`,
     algorithms: ['RS256']
 });
+
 ```

@@ -38,3 +38,11 @@ authentication.jwtCheck = (audience = null) => jwt({
 });
 
 ```
+
+## Permission validation
+
+Middleware function that takes apipermissions as input to check whether the user holds that api permissions
+
+```javascript
+apiPermissions.filter(value => req.user.permissions.includes(value)).length
+```

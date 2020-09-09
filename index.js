@@ -8,9 +8,9 @@ authentication.jwtCheck = jwt({
         cache: true,
         rateLimit: true,
         jwksRequestsPerMinute: 15,
-        jwksUri: `https://${process.env.DOMAIN}/.well-known/jwks.json`
+        jwksUri: `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`
     }),
-    issuer: `https://${process.env.DOMAIN}/`,
+    issuer: `https://${process.env.AUTH0_DOMAIN}/`,
     algorithms: ['RS256']
 });
 
